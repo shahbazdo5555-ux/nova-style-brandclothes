@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA STYLE | streetwear couture</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- navbar with unique brand name -->
+  <nav class="navbar">
+    <div class="logo">NOVA STYLE <span>// est. 2026</span></div>
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#products">COLLECTION</a>
+      <a href="#order">ORDER</a>
+      <a href="#contact">CHAT</a>
+      <div class="cart-icon" id="cartIcon"><i class="fas fa-bag-shopping"></i> <span id="cartCount">0</span></div>
+    </div>
+  </nav>
+
+  <!-- hero with unique name -->
+  <section id="home" class="hero">
+    <div>
+      <h1>NOVA STYLE <i class="fas fa-crown" style="font-size: 2.5rem;"></i><br>URBAN LUXE</h1>
+      <p>where clothing tells your story — all varieties, mens / womens / accessories</p>
+      <button class="hero-btn"
+        onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">EXPLORE</button>
+    </div>
+    <div class="hero-emoji">🧥👗👚</div>
+  </section>
+
+  <!-- search bar (unique) -->
+  <div class="search-section" id="products">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search 'jacket', 'jeans', 'men' ...">
+      <button id="searchBtn"><i class="fas fa-search"></i> FIND</button>
+    </div>
+  </div>
+
+  <!-- filter pills -->
+  <div class="filter-section" id="filterContainer"></div>
+
+  <!-- product grid with loader -->
+  <div id="loader" class="loader">
+    <div class="shimmer"></div>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+
+  <!-- contact row : order + complaint + whatsapp (with your number/email) -->
+  <div class="contact-row" id="order">
+    <div class="order-box">
+      <h2>📦 ORDER</h2>
+      <div class="form-group"><input type="text" id="orderName" placeholder="Full name"></div>
+      <div class="form-group"><input type="text" id="orderProduct" placeholder="Product name / ID"></div>
+      <div class="form-group"><input type="tel" id="orderPhone" placeholder="Phone (e.g. 923047733597)"></div>
+      <div class="form-group"><textarea rows="2" id="orderAddress" placeholder="Delivery address"></textarea></div>
+      <button class="btn" id="placeOrderBtn"><i class="fab fa-whatsapp"></i> ORDER VIA WA</button>
+    </div>
+    <div class="complaint-box" id="complaint">
+      <h2>✉️ COMPLAINT</h2>
+      <div class="form-group"><input type="text" id="complaintName" placeholder="Your name"></div>
+      <div class="form-group"><textarea rows="3" id="complaintMsg" placeholder="Describe issue..."></textarea></div>
+      <button class="btn" id="sendComplaintBtn"><i class="fas fa-envelope"></i> SEND EMAIL</button>
+    </div>
+    <div class="whatsapp-box" id="contact">
+      <h2>💬 CHAT</h2>
+      <p>WhatsApp / email direct</p>
+      <a href="https://wa.me/923047733597" target="_blank"><i class="fab fa-whatsapp"></i> +92 304 7733597</a>
+      <p style="margin-top:1rem;"><i class="far fa-envelope"></i> shahbazbashir1073@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- review modal -->
+  <div class="modal" id="reviewModal">
+    <div class="modal-card">
+      <h3 id="modalProductTitle">reviews</h3>
+      <div class="review-list" id="reviewList"></div>
+      <button class="btn" id="closeModalBtn" style="background:#4b6b84;">close</button>
+    </div>
+  </div>
+
+  <!-- cart side panel -->
+  <div class="cart-panel" id="cartPanel">
+    <button class="close-cart" id="closeCartBtn">&times;</button>
+    <h2>your bag</h2>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-total" id="cartTotal">total: $0</div>
+    <button class="btn" id="checkoutBtn" style="width:100%;">checkout via whatsapp</button>
+  </div>
+
+  <footer>
+    <p>NOVA STYLE — original clothing brand | all varieties | official: shahbazbashir1073@gmail.com | WA +92 304 7733597
+    </p>
+  </footer>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
