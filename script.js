@@ -27,7 +27,8 @@
       async function fetchData() {
         loader.style.display = 'flex';
         try {
-    const res = await fetch('https://corsproxy.io/?https://fakestoreapi.com/products');
+    // YEH USE KARO - GUARANTEED WORKING
+const res = await fetch('https://thingproxy.freeboard.io/fetch/https://fakestoreapi.com/products');
           const data = await res.json();
           allProducts = data;
           filteredProducts = [...allProducts];
