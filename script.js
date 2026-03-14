@@ -28,7 +28,7 @@
         loader.style.display = 'flex';
         try {
     // YEH USE KARO - GUARANTEED WORKING
-const res = await fetch('https://thingproxy.freeboard.io/fetch/https://fakestoreapi.com/products');
+const res = await fetch('https://api.codetabs.com/v1/proxy?quest=https://fakestoreapi.com/products');
           const data = await res.json();
           allProducts = data;
           filteredProducts = [...allProducts];
