@@ -27,7 +27,7 @@
       async function fetchData() {
         loader.style.display = 'flex';
         try {
-       const res = await fetch('https://api.allorigins.win/raw?url=https://fakestoreapi.com/products')
+     const res = await fetch('https://cors.bridged.cc/https://fakestoreapi.com/products');
           const data = await res.json();
           allProducts = data;
           filteredProducts = [...allProducts];
