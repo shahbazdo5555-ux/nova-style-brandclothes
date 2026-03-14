@@ -27,8 +27,8 @@
       async function fetchData() {
         loader.style.display = 'flex';
         try {
-// YEH BHI BEST HAI
-const res = await fetch('https://crossorigin.me/https://fakestoreapi.com/products');
+// YEH USE KARO - BILKUL KAAM KAREGA
+const res = await fetch('https://corsproxy.io/?https://fakestoreapi.com/products');
           const data = await res.json();
           allProducts = data;
           filteredProducts = [...allProducts];
